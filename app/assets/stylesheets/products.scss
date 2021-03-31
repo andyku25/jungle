@@ -50,6 +50,16 @@ main section.categories-show {
         border-bottom-left-radius: 20px;
         font-size: 0.8em;
       }
+      aside.sold-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: rgb(223, 91, 91);
+        color: white;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 3px;
+      }
 
       &:hover {
 
