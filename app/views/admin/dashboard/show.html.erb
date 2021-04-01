@@ -1,2 +1,14 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h3>Dashboard</h3>
+
+<ul class="nav nav-pills" role="tablist">
+  <li role="presentation">
+    <%= link_to "admin/products" do %>
+      Products <span class="badge"><%= @products.count %></span>
+    <% end %>
+    </li>
+    <li role="presentation">
+      <%= link_to "admin/categories" do %>
+        Categories <span class="badge"><%= @categories.count %></span>
+      <% end %>
+    </li>
+</ul>
