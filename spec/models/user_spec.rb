@@ -71,6 +71,42 @@ RSpec.describe User, type: :model do
       @user.save
       expect(User.authenticate_with_credentials("pizza@food.com", "mmmsoup")).to eq(@user)
     end
+
+    it "should return the nil when email is not authenticated" do
+      @user = User.new(
+        first_name: "Joseph",
+        last_name: "Tribbiani",
+        email: "pizzaaa@food.com",
+        password: "mmmsoup",
+        password_confirmation: "mmmsoup"
+      )
+      @user.save
+      expect(User.authenticate_with_credentials("pizza@food.com", "mmmsoup")).to be_nil
+    end
+
+    it "should return the user when email include additional whitespaces" do
+      @user = User.new(
+        first_name: "Johnny",
+        last_name: "Rose",
+        email: "example@domain.com",
+        password: "screek",
+        password_confirmation: "screek"
+      )
+      @user.save
+      expect(User.authenticate_with_credentials(" example@domain.com ", "screek")).to eq(@user)
+    end
+
+    it "should return the user when email is in different case" do
+      @user = User.new(
+        first_name: "Johnny",
+        last_name: "Rose",
+        email: "example@domain.com",
+        password: "screek",
+        password_confirmation: "screek"
+      )
+      @user.save
+      expect(User.authenticate_with_credentials("exAmple@domaiN.cOM", "screek")).to eq(@user)
+    end
   end
 
 end
