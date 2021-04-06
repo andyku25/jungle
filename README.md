@@ -1,6 +1,7 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2.
+A mini e-commerce application built with Rails 4.2. Where users are able to add items to shopping cart and checkout via Stripe Api.
+Admin users are able to create categories and add new products to the products page.
 
 
 ## Additional Steps for Apple M1 Machines
@@ -32,3 +33,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+
+## Demo
+![Product purchase](https://raw.githubusercontent.com/andyku25/jungle/master/Docs/add-cart-purchase.gif)
+![Add new Product/category](https://raw.githubusercontent.com/andyku25/jungle/master/Docs/new_category_product.gif)
