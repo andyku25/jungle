@@ -8,7 +8,7 @@ RSpec.feature "Visits a product page", type: :feature, js: true do
       @category.products.create!(
         name: Faker::Hipster.sentence(2),
         description: Faker::Hipster.paragraph(6),
-        image: open_asset("apparel1.jpg"),
+        image: open_asset("apparel2.jpg"),
         quantity: 20,
         price: 49.99
       )
@@ -21,7 +21,7 @@ RSpec.feature "Visits a product page", type: :feature, js: true do
 
     expect(page).to have_css("article.product-detail")
     
-    save_screenshot "Test2_product_page.png" # Screenshot is slow
+    save_screenshot "Test2_product_details.png" # Screenshot is slow
   end
 
 end
