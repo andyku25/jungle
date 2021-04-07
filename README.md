@@ -1,6 +1,13 @@
 # Jungle
 
 A mini e-commerce application built with Rails 4.2. Where users are able to add items to shopping cart and checkout via Stripe Api.
+
+Implement features to include:
+* "Sold Out" identifier
+* Admin Dashboard with ability to add new categories and products
+* User authentication and navbar dynamic render based on session
+* Order details page following purchase through Stripe API
+
 Admin users are able to create categories and add new products to the products page.
 
 
